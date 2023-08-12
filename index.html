@@ -9,12 +9,20 @@
         --sectionWidth: 800px;
       }
 
+      * {
+        border: none;
+        margin: none;
+        box-sizing: border-box;
+      }
+
       .heroSection {
         height: 100vh;
       }
 
       header,
-      .mainHero {
+      .mainHero,
+      aside,
+      .aboutMe {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -23,12 +31,51 @@
       }
 
       .mainHero {
-        height: 70%;
+        height: 80%;
       }
 
       .navList {
         display: flex;
         gap: 5px;
+        list-style: none;
+      }
+
+      .mainHero-t-c,
+      .aboutMe-t-c {
+        width: 50%;
+      }
+
+      .mainHero-img-c,
+      .aboutMe-img-c {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+      }
+
+      .mainHero-img-c .overflow-c,
+      .aboutMe-img-c .overflow-c {
+        border-radius: 50%;
+        height: 300px;
+        width: 300px;
+        overflow: hidden;
+        box-shadow: 0px 4px 10px rgb(148, 148, 148);
+      }
+
+      .mainHero-img {
+        width: 400px;
+        transform: translate(-10%, 0%);
+      }
+
+      aside {
+        flex-direction: column;
+      }
+
+      aside ul {
+        display: flex;
+        gap: 10px 80px;
+        justify-content: center;
+        align-items: center;
+        flex-flow: wrap;
         list-style: none;
       }
     </style>
@@ -47,7 +94,7 @@
         </nav>
       </header>
       <div class="mainHero">
-        <div>
+        <div class="mainHero-t-c">
           <h1>User-focused, Innovative Front-End Developer</h1>
           <p>
             I am dedicated to weaving cutting-edge technologies and creative
@@ -55,7 +102,15 @@
           </p>
           <a href="">Learn More!</a>
         </div>
-        <img src="#" alt="Photo of jack Morrell" />
+        <div class="mainHero-img-c">
+          <div class="overflow-c">
+            <img
+              class="mainHero-img"
+              src="TheBodega.png"
+              alt="Photo of jack Morrell"
+            />
+          </div>
+        </div>
       </div>
     </section>
     <aside>
@@ -74,9 +129,17 @@
       </ul>
     </aside>
     <main>
-      <section aria-label="about-me">
-        <img src="#" alt="img of Jack" />
-        <div>
+      <section class="aboutMe" aria-label="about-me">
+        <div class="aboutMe-img-c">
+          <div class="overflow-c">
+            <img
+              class="mainHero-img"
+              src="So_serious.JPG"
+              alt="Photo of jack Morrell"
+            />
+          </div>
+        </div>
+        <div class="aboutMe-t-c">
           <h3>A little about me!</h3>
           <p>
             My journey into the world of code began with an insatiable curiosity
